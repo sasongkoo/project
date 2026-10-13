@@ -1,0 +1,61 @@
+/* ---- Jastipsy signature styles ---- */
+
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+/* slow editorial marquee */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-x 46s linear infinite;
+  will-change: transform;
+}
+
+/* editorial outline type */
+.text-outline {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+.text-outline-cyber {
+  -webkit-text-stroke: 1.5px rgba(230, 255, 0, 0.55);
+  color: transparent;
+}
+
+/* ticket barcode */
+.barcode {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #050505 0 2px,
+    transparent 2px 4px,
+    #050505 4px 5px,
+    transparent 5px 9px,
+    #050505 9px 12px,
+    transparent 12px 14px
+  );
+}
+
+/* duotone treatment for concert photography */
+.img-duotone {
+  filter: grayscale(1) contrast(1.2) brightness(0.8);
+}
+
+/* dark date picker */
+input[type="date"] {
+  color-scheme: dark;
+}

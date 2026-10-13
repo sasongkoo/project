@@ -1,0 +1,118 @@
+{
+  "theme_strategy": "Dark Theme (Electric/Neon archetype blended with Swiss High-Contrast). Focused on conveying urgency, speed, and reliability for concert ticket proxy buying.",
+  "language": "Bahasa Indonesia",
+  "typography": {
+    "heading_font": "Clash Display, Unbounded, or Anton (Wide, High-Impact Display fonts). MUST NOT use Inter.",
+    "body_font": "Outfit or Manrope (Clean, readable, geometric).",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl+ tracking-tighter leading-none font-black uppercase",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold uppercase",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "body": "text-base leading-relaxed text-gray-300",
+      "labels": "text-xs tracking-[0.2em] uppercase font-bold"
+    }
+  },
+  "colors": {
+    "background": "#050505 (Deepest Void Black)",
+    "surface": "#111111 (Tinted Charcoal, used with 1px border-white/10)",
+    "primary": "#E6FF00 (Cyber Yellow for successful/active states)",
+    "accent": "#FF007F (Electric Pink for tension/hover states)",
+    "text_primary": "#F5F5F5 (Off-white)",
+    "text_secondary": "#A1A1AA (Zinc 400)",
+    "borders": "rgba(255,255,255,0.1)"
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise/grain overlay across the page to kill digital flatness.",
+    "borders": "1px crisp edges (border-white/10) on dark surfaces.",
+    "shadows": "Glow shadows (drop-shadow-[0_0_15px_rgba(230,255,0,0.3)]) on primary buttons."
+  },
+  "layouts": {
+    "bento_grid": "Mode A 'Tetris Grid' for the Services section. grid-cols-1 md:grid-cols-12 gap-8. Mix spans (e.g., col-span-8 row-span-2 for hero feature, col-span-4 for supporting). Always leave breathing room.",
+    "spacing": "Generous spacing. py-24 or py-32 for sections. Container internal padding p-6 or p-8.",
+    "alignment": "Optical alignment. Left-align dense content and forms. Do not center-everything."
+  },
+  "motion": {
+    "scroll": "MANDATORY: Use Lenis for smooth momentum scrolling.",
+    "kinetic_hero": "Framer-motion staggered line-by-line masked reveal on load. Split text into lines/words, animate y-offset, opacity, and slight blur-to-focus.",
+    "marquee": "Use react-fast-marquee. 'Kinetic Texture' style: Massive outline text (text-8xl+ border-white/20 text-transparent) running slowly in the background.",
+    "micro_interactions": "Hover states on all buttons (scale up, color shift). Subtle parallax (y offset based on scroll) for the hero background image."
+  },
+  "sections": [
+    {
+      "name": "Sticky Nav",
+      "instructions": "Fixed at top (z-50). Crystal Glassmorphism: backdrop-blur-xl bg-black/60, border-b border-white/10. Must contain original SVG logo mark ('Jastipsy' stylized) and primary CTA."
+    },
+    {
+      "name": "Kinetic Hero",
+      "instructions": "Massive kinetic typography (e.g., 'AMANKAN TIKET KONSERMU', 'TANPA STRES'). Masked line-by-line reveal. Background: real concert photography with heavy overlay (bg-black/50) and subtle parallax on scroll. No purely transparent headers."
+    },
+    {
+      "name": "Editorial Marquee",
+      "instructions": "Slowly drifting text. e.g., 'WAR TIKET ANTI GAGAL — JASTIPSY — VVIP & REGULAR'"
+    },
+    {
+      "name": "Stats & Trust Band",
+      "instructions": "High contrast typography. E.g., '1000+ Tiket Secured', '99% Success Rate'. Use Cyber Yellow accents."
+    },
+    {
+      "name": "How It Works (3 Steps)",
+      "instructions": "Step-by-step flow with vertical lines or animated borders (Tracing Beam style). Steps: 1. Pilih Konser, 2. Isi Form & DP, 3. Tiket Secured!"
+    },
+    {
+      "name": "Services / Why Us Bento",
+      "instructions": "Asymmetrical Bento Grid. Cards with dark flat backgrounds or subtle neomorphism (1px white/10 borders). Real concert photography inside clipped/rounded inner frames with duotone or spotlight treatment."
+    },
+    {
+      "name": "Order Request Form",
+      "instructions": "Shadcn Form. Minimalist, premium inputs (bottom border only or soft dark surfaces). Posts to backend. MUST have data-testid on all inputs and submit."
+    },
+    {
+      "name": "FAQ Accordion",
+      "instructions": "Shadcn Accordion. Clean, minimal, high contrast on open."
+    },
+    {
+      "name": "Final CTA",
+      "instructions": "Massive typography. 'SIAP WAR TIKET?'. Primary Button links to Instagram DM (@jastipsy). Hover states must shift color."
+    },
+    {
+      "name": "Footer",
+      "instructions": "py-24. Darker contrast. Massive 'JASTIPSY' text at text-[10vw] filling the width."
+    }
+  ],
+  "images": [
+    {
+      "category": "Hero Background / Parallax",
+      "url": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwzfHxjb25jZXJ0JTIwY3Jvd2QlMjBzdHJvYmUlMjBsaWdodHN8ZW58MHx8fHwxNzkxODYwODkxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark, cinematic concert crowd with strobe lights. Use with bg-black/60 overlay to ensure text contrast."
+    },
+    {
+      "category": "Bento Grid / Features",
+      "url": "https://images.unsplash.com/photo-1506157786151-b8491531f063?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwyfHxldXBob3JpYyUyMG11c2ljJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzkxODYwODkxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Euphoric crowd raising hands. Apply duotone (black and cyber yellow/pink) or spotlight treatment."
+    },
+    {
+      "category": "How It Works / Context",
+      "url": "https://images.unsplash.com/photo-1652018440238-1aeb20a803a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwyfHxob2xkaW5nJTIwY29uY2VydCUyMHRpY2tldHxlbnwwfHx8fDE3OTE4NjA4OTF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Holding a physical ticket. Great for the 'Order/Success' visual context."
+    },
+    {
+      "category": "Visual Enhancers / Clipped Frames",
+      "url": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwzfHxldXBob3JpYyUyMG11c2ljJTIwZmVzdGl2YWx8ZW58MHx8fHwxNzkxODYwODkxfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dynamic stage neon strobe lights. Use as a clipped inner image within Bento Grid."
+    }
+  ],
+  "universal_guidelines_for_main_agent": [
+    "You MUST NOT apply universal transition (e.g., transition: all). Add transitions for specific interactive elements only.",
+    "You MUST NOT center align the app container (.App { text-align: center; } is banned).",
+    "All interactive and key informational elements MUST include a data-testid attribute (e.g., data-testid='submit-order-btn').",
+    "Use sonner for toasts, located at /app/frontend/src/components/ui/sonner.js.",
+    "Note that files are .js (not .tsx) as per the project requirements. Write Shadcn components in .js format.",
+    "Do NOT use HTML components for advanced UI (dropdowns, accordions, etc.). Use Shadcn.",
+    "Never use purely transparent backgrounds for navbars or overlays if content scrolls behind them; always use crystal glassmorphism (backdrop-blur-xl bg-black/60).",
+    "Copy MUST be strictly in Bahasa Indonesia.",
+    "Create depth through layered design elements with z-index hierarchy. Ensure dark colors are used without gradients as the base.",
+    "Implement Lenis for smooth scrolling. Wrap main content in a Lenis provider if applicable, or initialize it globally.",
+    "For the original SVG logo mark + favicon requirement, generate a clean, bold typographic or vector SVG representing 'Jastipsy' inline in the code.",
+    "Always check contrast ratios. Ensure text over images has sufficient text-shadow or a gradient overlay underneath."
+  ]
+}
