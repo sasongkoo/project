@@ -5,7 +5,7 @@ const STEPS = [
   {
     n: "/01",
     t: "Kirim event-nya",
-    d: "DM @jastipsy atau isi form di bawah: sebutkan event, tanggal, dan kategori tiket yang kamu incar.",
+    d: "DM @jastipisy atau isi form di bawah: sebutkan event, tanggal, dan kategori tiket yang kamu incar.",
   },
   {
     n: "/02",
@@ -15,12 +15,12 @@ const STEPS = [
   {
     n: "/03",
     t: "War day",
-    d: "Tim Jastipsy standby penuh di jam penjualan, siap bertarung di barisan paling depan.",
+    d: "Tim Jastipisy standby penuh di jam penjualan, siap bertarung di barisan paling depan.",
   },
   {
     n: "/04",
     t: "Tiket secured",
-    d: "Tiket dibeli atas nama kamu, e-tiketnya diteruskan langsung ke DM. Kamu tinggal berangkat.",
+    d: "Tiket yang didapat akan diteruskan langsung ke e-mail kamu. Kamu tinggal berangkat.",
   },
 ];
 
@@ -46,8 +46,8 @@ export default function HowItWorks() {
           </div>
           <FadeUp delay={0.2} className="max-w-sm">
             <p className="text-sm leading-relaxed text-zinc-400 md:text-base">
-              Semua prosesnya transparan. Kamu selalu tahu posisi pesananmu — dari antrian sampai
-              e-tiket masuk DM.
+              Semua prosesnya transparan. Kamu hanya perlu menunggu sampai
+              e-tiket masuk e-mail kamu.
             </p>
           </FadeUp>
         </div>

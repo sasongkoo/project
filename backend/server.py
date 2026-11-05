@@ -70,7 +70,7 @@ class OrderCreate(BaseModel):
 
 @api_router.get("/")
 async def root():
-    return {"message": "Jastipsy API berjalan"}
+    return {"message": "Jastipisy API berjalan"}
 
 
 @api_router.post("/orders", status_code=201)

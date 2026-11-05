@@ -12,7 +12,7 @@ function TicketStub() {
   return (
     <div className="w-[300px] border border-void/20 bg-cyber text-void shadow-[0_30px_80px_rgba(230,255,0,0.18)]">
       <div className="flex items-center justify-between border-b border-dashed border-void/30 px-5 py-3">
-        <span className="font-display text-lg tracking-wide">JASTIPSY</span>
+        <span className="font-display text-lg tracking-wide">JASTIPISY</span>
         <span className="font-mono text-[10px] font-bold uppercase tracking-[0.2em]">e-ticket</span>
       </div>
       <div className="px-5 py-4">
@@ -88,7 +88,7 @@ export default function Hero() {
         <FadeUp y={16} className="mb-6 flex items-center gap-3">
           <span className="inline-block h-2 w-2 animate-pulse-dot rounded-full bg-cyber" />
           <span className="font-mono text-xs uppercase tracking-[0.3em] text-zinc-300">
-            Jasa titip tiket — @jastipsy
+            Jasa titip tiket — @jastipisy
           </span>
         </FadeUp>
 
@@ -109,7 +109,7 @@ export default function Hero() {
         <div className="mt-8 flex flex-col gap-8 md:mt-10 md:flex-row md:items-end md:justify-between">
           <FadeUp delay={0.7} className="max-w-xl">
             <p data-testid="hero-sub" className="text-base leading-relaxed text-zinc-300 md:text-lg">
-              Jastipsy adalah jasa titip buat ngejar tiket yang selalu sold out — konser, festival,
+              Jastipisy adalah jasa titip buat ngejar tiket yang selalu sold out — konser, festival,
               sampai event olahraga. Kamu tinggal nunggu kabar gembira, kami yang berburu di garis
               depan.
             </p>

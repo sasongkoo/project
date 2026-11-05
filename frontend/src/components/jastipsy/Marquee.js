@@ -1,9 +1,9 @@
 const ITEMS = [
-  "WAR TIKET ANTI GAGAL",
+  "SOLUSI WAR TIKET TERPERCAYA",
   "JASTIP TIKET KONSER",
   "FESTIVAL & OLAHRAGA",
   "SOLD OUT? BUKAN HALANGAN",
-  "@JASTIPSY",
+  "@JASTIPISY",
 ];
 
 function Sequence({ hidden }) {

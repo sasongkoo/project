@@ -16,9 +16,25 @@ import {
 import { FadeUp, MaskedLines } from "./Reveal";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
-const IG_URL = "https://instagram.com/jastipsy";
+const IG_URL = "https://instagram.com/jastipisy";
+const WA_NUMBER = "6287782216584";
 
 const CATEGORIES = ["Konser", "Festival", "Event Olahraga", "Theater & Musical", "Lainnya"];
+
+const buildWaUrl = (f) => {
+  const lines = [
+    "Halo Jastipsy! Saya mau pesan jastip tiket:",
+    "",
+    `Nama: ${f.name}`,
+    `Instagram: ${f.instagram}`,
+    `Kategori event: ${f.category}`,
+    `Event & lokasi: ${f.event_name}`,
+  ];
+  if (f.event_date) lines.push(`Tanggal penjualan/event: ${f.event_date}`);
+  if (f.notes) lines.push(`Catatan: ${f.notes}`);
+  lines.push("", "Mohon info biaya & ketersediaan slotnya ya!");
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(lines.join("\n"))}`;
+};
 
 export default function OrderForm() {
   const [form, setForm] = useState({
@@ -34,23 +50,34 @@ export default function OrderForm() {
   const set = (key) => (value) => setForm((f) => ({ ...f, [key]: value }));
 
   const onSubmit = async (e) => {
-    e.preventDefault();
-    if (loading) return;
-    setLoading(true);
-    try {
-      await axios.post(`${API}/orders`, form);
-      toast.success("Pesanan diterima!", {
-        description: "Kami lanjutkan via DM Instagram kamu.",
-      });
-      setForm({ name: "", instagram: "", category: "", event_name: "", event_date: "", notes: "" });
-    } catch (err) {
-      toast.error("Gagal mengirim pesanan.", {
-        description: "Coba lagi, atau langsung DM @jastipsy.",
-      });
-    } finally {
-      setLoading(false);
+  e.preventDefault();
+  if (loading) return;
+  setLoading(true);
+
+  // Buka tab kosong SEKARANG (masih dalam konteks klik user)
+  const waWindow = window.open("", "_blank");
+  const waUrl = buildWaUrl(form);
+
+  try {
+    await axios.post(`${API}/orders`, form);
+    toast.success("Pesanan diterima!", {
+      description: "Lanjutkan konfirmasi lewat WhatsApp.",
+    });
+    setForm({ name: "", instagram: "", category: "", event_name: "", event_date: "", notes: "" });
+  } catch (err) {
+    toast.error("Gagal menyimpan pesanan.", {
+      description: "Tetap lanjut lewat WhatsApp ya.",
+    });
+  } finally {
+    // Arahkan tab tadi ke WhatsApp; fallback kalau popup diblokir
+    if (waWindow) {
+      waWindow.location.href = waUrl;
+    } else {
+      window.location.href = waUrl;
     }
-  };
+    setLoading(false);
+  }
+};
 
   return (
     <section id="order" data-testid="order-section" className="border-t border-white/10 bg-void py-24 md:py-32">
@@ -97,7 +124,7 @@ export default function OrderForm() {
                   <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-400">
                     Mau tanya-tanya dulu?
                   </p>
-                  <p className="font-display text-xl tracking-wide text-white">DM @JASTIPSY</p>
+                  <p className="font-display text-xl tracking-wide text-white">DM @JASTIPISY</p>
                 </div>
               </div>
               <Send className="h-4 w-4 text-cyber" />

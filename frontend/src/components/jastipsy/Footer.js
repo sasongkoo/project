@@ -3,7 +3,7 @@ import { LogoFull } from "./Logo";
 import { FadeUp } from "./Reveal";
 import { scrollToId } from "@/lib/lenis";
 
-const IG_URL = "https://instagram.com/jastipsy";
+const IG_URL = "https://instagram.com/jastipisy";
 
 const LINKS = [
   { label: "Cara Kerja", id: "cara-kerja" },
@@ -43,17 +43,17 @@ export default function Footer() {
             className="inline-flex items-center gap-2 border border-white/15 px-5 py-3 font-mono text-xs font-bold uppercase tracking-[0.15em] text-white transition-all duration-200 hover:border-cyber hover:text-cyber"
           >
             <Instagram className="h-4 w-4" />
-            @jastipsy
+            @jastipisy
           </a>
         </div>
 
         <p className="mt-14 select-none overflow-hidden whitespace-nowrap text-center font-display text-[13vw] uppercase leading-[0.85] text-outline opacity-60">
-          JASTIPSY
+          JASTIPISY
         </p>
 
         <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 py-6 md:flex-row">
           <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500">
-            © {new Date().getFullYear()} Jastipsy. Semua tiket via kanal resmi event.
+            © {new Date().getFullYear()} Jastipisy. Semua tiket via kanal resmi event.
           </p>
           <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-zinc-500">
             Made for the front row

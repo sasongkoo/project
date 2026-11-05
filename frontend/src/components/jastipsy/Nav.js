@@ -3,7 +3,7 @@ import { Instagram, Menu, X } from "lucide-react";
 import { LogoFull } from "./Logo";
 import { scrollToId } from "@/lib/lenis";
 
-const IG_URL = "https://instagram.com/jastipsy";
+const IG_URL = "https://instagram.com/jastipisy";
 
 const LINKS = [
   { label: "Cara Kerja", id: "cara-kerja" },
@@ -100,7 +100,7 @@ export default function Nav() {
             className="mt-8 inline-flex items-center justify-center gap-2 bg-cyber px-6 py-4 font-mono text-sm font-bold uppercase tracking-[0.15em] text-void"
           >
             <Instagram className="h-4 w-4" />
-            Order via DM @jastipsy
+            Order via DM @jastipisy
           </a>
         </div>
       )}

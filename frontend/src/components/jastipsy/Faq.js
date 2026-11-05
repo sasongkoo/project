@@ -8,12 +8,12 @@ import { FadeUp, MaskedLines } from "./Reveal";
 
 const FAQS = [
   {
-    q: "Apa itu Jastipsy?",
-    a: "Jastipsy adalah jasa titip (jastip) untuk membeli tiket event yang penuh perang — konser, festival, event olahraga, dan lainnya. Kamu titip, kami yang bertarung di jam penjualan.",
+    q: "Apa itu Jastipisy?",
+    a: "Jastipisy adalah jasa titip (jastip) untuk membeli tiket event yang penuh perang — konser, festival, event olahraga, dan lainnya. Kamu titip, kami yang bertarung di jam penjualan.",
   },
   {
     q: "Bagaimana cara pesannya?",
-    a: "Paling gampang langsung DM Instagram @jastipsy, atau isi form pesanan di halaman ini. Tim kami akan lanjutkan via DM untuk konfirmasi detail dan biaya.",
+    a: "Paling gampang langsung DM Instagram @jastipisy, atau isi form pesanan di halaman ini. Tim kami akan lanjutkan via DM untuk konfirmasi detail dan biaya.",
   },
   {
     q: "Berapa biaya jasanya?",

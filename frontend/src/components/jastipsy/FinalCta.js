@@ -34,7 +34,7 @@ export default function FinalCta() {
             className="inline-flex items-center gap-2 bg-cyber px-9 py-5 font-mono text-sm font-bold uppercase tracking-[0.15em] text-void shadow-[0_0_40px_rgba(230,255,0,0.25)] transition-all duration-200 hover:scale-[1.03] hover:bg-neon hover:shadow-[0_0_40px_rgba(255,0,127,0.35)] active:scale-[0.98]"
           >
             <Instagram className="h-4 w-4" />
-            DM @jastipsy
+            DM @jastipisy
           </a>
           <button
             data-testid="final-cta-form-btn"

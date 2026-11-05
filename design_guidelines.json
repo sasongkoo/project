@@ -40,7 +40,7 @@
   "sections": [
     {
       "name": "Sticky Nav",
-      "instructions": "Fixed at top (z-50). Crystal Glassmorphism: backdrop-blur-xl bg-black/60, border-b border-white/10. Must contain original SVG logo mark ('Jastipsy' stylized) and primary CTA."
+      "instructions": "Fixed at top (z-50). Crystal Glassmorphism: backdrop-blur-xl bg-black/60, border-b border-white/10. Must contain original SVG logo mark ('Jastipisy' stylized) and primary CTA."
     },
     {
       "name": "Kinetic Hero",
@@ -48,7 +48,7 @@
     },
     {
       "name": "Editorial Marquee",
-      "instructions": "Slowly drifting text. e.g., 'WAR TIKET ANTI GAGAL — JASTIPSY — VVIP & REGULAR'"
+      "instructions": "Slowly drifting text. e.g., 'SOLUSI WAR TIKET TERPERCAYA — JASTIPISY — VVIP & REGULAR'"
     },
     {
       "name": "Stats & Trust Band",
@@ -72,11 +72,11 @@
     },
     {
       "name": "Final CTA",
-      "instructions": "Massive typography. 'SIAP WAR TIKET?'. Primary Button links to Instagram DM (@jastipsy). Hover states must shift color."
+      "instructions": "Massive typography. 'SIAP WAR TIKET?'. Primary Button links to Instagram DM (@jastipisy). Hover states must shift color."
     },
     {
       "name": "Footer",
-      "instructions": "py-24. Darker contrast. Massive 'JASTIPSY' text at text-[10vw] filling the width."
+      "instructions": "py-24. Darker contrast. Massive 'JASTIPISY' text at text-[10vw] filling the width."
     }
   ],
   "images": [
@@ -112,7 +112,7 @@
     "Copy MUST be strictly in Bahasa Indonesia.",
     "Create depth through layered design elements with z-index hierarchy. Ensure dark colors are used without gradients as the base.",
     "Implement Lenis for smooth scrolling. Wrap main content in a Lenis provider if applicable, or initialize it globally.",
-    "For the original SVG logo mark + favicon requirement, generate a clean, bold typographic or vector SVG representing 'Jastipsy' inline in the code.",
+    "For the original SVG logo mark + favlogo requirement, generate a clean, bold typographic or vector SVG representing 'Jastipisy' inline in the code.",
     "Always check contrast ratios. Ensure text over images has sufficient text-shadow or a gradient overlay underneath."
   ]
 }

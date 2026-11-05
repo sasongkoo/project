@@ -72,8 +72,7 @@ export default function Bento() {
           </div>
           <FadeUp delay={0.2} className="max-w-sm">
             <p className="text-sm leading-relaxed text-zinc-400 md:text-base">
-              Kalau tiketnya dijual online dan selalu habis dalam hitungan menit — itu medan perang
-              kami.
+              Masih ragu dengan jasa kami? Kamu bisa cek testimoni dari pelanggan kami di Instagram Kami.
             </p>
           </FadeUp>
         </div>
@@ -105,13 +104,13 @@ export default function Bento() {
             span="md:col-span-4"
             icon={BellRing}
             title="Update real-time"
-            desc="Kamu selalu tahu status pesanan — dari jam war, posisi antrian, sampai e-tiket diteruskan."
+            desc="Kamu hanya perlu menunggu sampai e-tiket masuk e-mail kamu."
           />
           <InfoCard
             span="md:col-span-4"
             icon={ShieldCheck}
             title="Aman & transparan"
-            desc="Tiket dibeli lewat kanal resmi event atas nama kamu. Tanpa tiket abal-abal, tanpa drama."
+            desc="Tiket dibeli lewat kanal resmi event. Tanpa tiket abal-abal, tanpa drama."
           />
           <InfoCard
             span="md:col-span-4"

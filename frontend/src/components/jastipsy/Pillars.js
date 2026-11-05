@@ -8,13 +8,13 @@ const PILLARS = [
   },
   {
     n: "02",
-    t: "TEGAS",
-    d: "Strategi antrian yang teruji — siap menghadapi sistem antrean paling brutal sekalipun.",
+    t: "TERPERCAYA",
+    d: "Jasa titip tiket yang terpercaya — mulai dari lokal hingga internasional.",
   },
   {
     n: "03",
     t: "AMAN",
-    d: "Semua tiket dibeli lewat kanal resmi event dan diteruskan langsung ke kamu.",
+    d: "Semua tiket dibeli lewat kanal resmi event dan diteruskan langsung ke e-mail kamu.",
   },
 ];
 
