@@ -1,7 +1,6 @@
 import { useState } from "react";
-import axios from "axios";
 import { toast } from "sonner";
-import { Instagram, Loader2, Send } from "lucide-react";
+import { Instagram, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +14,6 @@ import {
 } from "@/components/ui/select";
 import { FadeUp, MaskedLines } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const IG_URL = "https://instagram.com/jastipisy";
 const WA_NUMBER = "6287782216584";
 
@@ -23,7 +21,7 @@ const CATEGORIES = ["Konser", "Festival", "Event Olahraga", "Theater & Musical",
 
 const buildWaUrl = (f) => {
   const lines = [
-    "Halo Jastipsy! Saya mau pesan jastip tiket:",
+    "Halo Jastipisy! Saya mau pesan jastip tiket:",
     "",
     `Nama: ${f.name}`,
     `Instagram: ${f.instagram}`,
@@ -45,39 +43,26 @@ export default function OrderForm() {
     event_date: "",
     notes: "",
   });
-  const [loading, setLoading] = useState(false);
 
   const set = (key) => (value) => setForm((f) => ({ ...f, [key]: value }));
 
-  const onSubmit = async (e) => {
-  e.preventDefault();
-  if (loading) return;
-  setLoading(true);
+  const onSubmit = (e) => {
+    e.preventDefault();
+    
+    if (!form.category) {
+      toast.error("Pilih kategori event dulu ya.");
+      return;
+    }
 
-  // Buka tab kosong SEKARANG (masih dalam konteks klik user)
-  const waWindow = window.open("", "_blank");
-  const waUrl = buildWaUrl(form);
+    const waUrl = buildWaUrl(form);
+    const win = window.open(waUrl, "_blank", "noopener,noreferrer");
+    if (!win) window.location.href = waUrl; // fallback kalau popup diblokir
 
-  try {
-    await axios.post(`${API}/orders`, form);
-    toast.success("Pesanan diterima!", {
-      description: "Lanjutkan konfirmasi lewat WhatsApp.",
+    toast.success("Membuka WhatsApp...", {
+      description: "Kirim pesannya di sana untuk konfirmasi pesanan.",
     });
     setForm({ name: "", instagram: "", category: "", event_name: "", event_date: "", notes: "" });
-  } catch (err) {
-    toast.error("Gagal menyimpan pesanan.", {
-      description: "Tetap lanjut lewat WhatsApp ya.",
-    });
-  } finally {
-    // Arahkan tab tadi ke WhatsApp; fallback kalau popup diblokir
-    if (waWindow) {
-      waWindow.location.href = waUrl;
-    } else {
-      window.location.href = waUrl;
-    }
-    setLoading(false);
-  }
-};
+  };
 
   return (
     <section id="order" data-testid="order-section" className="border-t border-white/10 bg-void py-24 md:py-32">
@@ -236,18 +221,10 @@ export default function OrderForm() {
             <Button
               type="submit"
               data-testid="submit-order-btn"
-              disabled={loading}
+              
               className="h-13 w-full rounded-none bg-cyber py-4 font-mono text-sm font-bold uppercase tracking-[0.2em] text-void shadow-[0_0_30px_rgba(230,255,0,0.2)] transition-all duration-200 hover:bg-neon hover:text-white active:scale-[0.99]"
             >
-              {loading ? (
-                <>
-                  <Loader2 className="h-4 w-4 animate-spin" /> Mengirim...
-                </>
-              ) : (
-                <>
-                  Kirim pesanan <Send className="h-4 w-4" />
-                </>
-              )}
+              Kirim pesanan <Send className="h-4 w-4" />
             </Button>
           </form>
         </FadeUp>
