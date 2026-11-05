@@ -89,3 +89,6 @@ android-sdk/
 
 #emergent
 .emergent/
+memory/
+test_reports/
+tests/
